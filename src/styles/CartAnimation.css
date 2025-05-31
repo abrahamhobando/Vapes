@@ -1,0 +1,64 @@
+/* Cart Animation Styles */
+.cart-item-fly {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+/* Animation for flying item to cart */
+@keyframes flyToCart {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 0.7;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
+
+/* Cart icon animation when receiving item */
+@keyframes cartBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cart-bounce {
+  animation: cartBounce 0.5s ease-in-out;
+}
+
+/* Cart badge animation */
+@keyframes cartBadgePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cart-badge .count.animate {
+  animation: cartBadgePulse 0.5s ease-in-out;
+}

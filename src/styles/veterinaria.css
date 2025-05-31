@@ -1,0 +1,254 @@
+:root {
+  --primary-color: #4A7C59; /* Verde oscuro para transmitir naturaleza y cuidado */
+  --secondary-color: #3A6EA5; /* Azul medio para transmitir confianza y profesionalismo */
+  --accent-color: #C4E0F9; /* Azul claro para acentos y detalles */
+  --text-color: #333333; /* Texto oscuro para buena legibilidad */
+  --background-color: #F5F9FC; /* Fondo claro con tono azulado suave */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+  --card-bg: #FFFFFF;
+  --border-radius: 12px;
+  --card-shadow: 0 8px 20px rgba(58, 110, 165, 0.15);
+  --hover-transform: translateY(-5px);
+}
+
+/* Estilos para la sección Hero */
+.hero-section {
+  position: relative;
+  height: 350px;
+  background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'); /* Imagen de perros felices */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(58, 110, 165, 0.6), rgba(74, 124, 89, 0.8));
+  z-index: 1;
+}
+
+/* Estilos para tarjetas de servicios */
+.service-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: var(--hover-transform);
+  box-shadow: 0 15px 35px rgba(58, 110, 165, 0.2);
+}
+
+.service-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-content h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.service-content p {
+  color: var(--text-color);
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.service-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.service-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Estilos para testimonios */
+.testimonial-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(58, 110, 165, 0.2);
+}
+
+.quote-icon {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  opacity: 0.2;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.star-icon {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Estilos para CTA */
+.cta-section {
+  background-image: linear-gradient(rgba(58, 110, 165, 0.8), rgba(74, 124, 89, 0.9)), url('https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'); /* Imagen de veterinario con mascota */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  color: white;
+}
+
+/* Estilos para productos */
+.product-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: var(--hover-transform);
+  box-shadow: 0 15px 35px rgba(58, 110, 165, 0.2);
+}
+
+.product-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 400px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .services-grid,
+  .featured-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}

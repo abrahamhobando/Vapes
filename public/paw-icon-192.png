@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <circle cx="96" cy="96" r="96" fill="#4A7C59"/>
+  <g fill="#ffffff">
+    <!-- Huella de perro -->
+    <ellipse cx="96" cy="60" rx="20" ry="25" transform="rotate(-15 96 60)"/>
+    <ellipse cx="60" cy="90" rx="18" ry="22" transform="rotate(-45 60 90)"/>
+    <ellipse cx="132" cy="90" rx="18" ry="22" transform="rotate(45 132 90)"/>
+    <ellipse cx="75" cy="130" rx="15" ry="20" transform="rotate(-15 75 130)"/>
+    <ellipse cx="117" cy="130" rx="15" ry="20" transform="rotate(15 117 130)"/>
+    <ellipse cx="96" cy="100" rx="30" ry="25"/>
+  </g>
+</svg>

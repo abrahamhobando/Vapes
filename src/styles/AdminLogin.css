@@ -1,0 +1,96 @@
+/* Estilos para la página de inicio de sesión de administrador */
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Un fondo suave */
+  padding: 2rem;
+}
+
+.admin-login-card {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.admin-login-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.75rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4caf50; /* Color primario del tema de Admin.css */
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.error-message-login {
+  background-color: #ffebee; /* Similar a Admin.css */
+  color: #c62828; /* Similar a Admin.css */
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #c62828; /* Similar a Admin.css */
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.login-button {
+  background-color: #4caf50; /* Color primario del tema de Admin.css */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.login-button:hover {
+  background-color: #388e3c; /* Oscurecer al pasar el mouse, como en Admin.css */
+}
+
+.login-button:disabled {
+  background-color: #a5d6a7; /* Color deshabilitado, como en Admin.css */
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .admin-login-card {
+    padding: 2rem;
+  }
+  .admin-login-card h2 {
+    font-size: 1.5rem;
+  }
+}

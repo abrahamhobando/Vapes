@@ -1,0 +1,445 @@
+/* Estilos para la página de Feedback */
+
+.feedback-page {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Barra de progreso */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.step-indicator {
+  text-align: right;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Estilos para los pasos */
+.feedback-step {
+  min-height: 300px;
+  width: 100%;
+}
+
+.feedback-step h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.step-description {
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+/* Paso 1: Selección de servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card.selected {
+  border-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.05);
+}
+
+.service-image {
+  height: 120px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-info {
+  padding: 1rem;
+  position: relative;
+}
+
+.service-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.selected-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4caf50;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Paso 2: Calificación */
+.rating-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.stars-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.star {
+  font-size: 2.5rem;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+.star.active {
+  color: #ffc107;
+}
+
+.rating-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.return-options {
+  margin-top: 2rem;
+}
+
+.return-options h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.option-btn {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 30px;
+  background-color: white;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.option-btn.selected {
+  border-color: #4caf50;
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Paso 3: Lo que más gustó */
+.like-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.like-option {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 30px;
+  background-color: white;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.like-option:hover {
+  background-color: #f8f9fa;
+}
+
+.like-option.selected {
+  border-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.1);
+  padding-right: 2.5rem;
+}
+
+.check-icon {
+  position: absolute;
+  right: 10px;
+  color: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.other-input {
+  margin-top: 1rem;
+}
+
+.other-input input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Paso 4: Comentario */
+.comment-container {
+  width: 100%;
+}
+
+.comment-container textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Paso 5: Contacto */
+.contact-container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.contact-container input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.submit-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.submit-btn {
+  padding: 1rem 2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.submit-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Botones de navegación */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.nav-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-btn.prev {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.nav-btn.next {
+  background-color: #4caf50;
+  color: white;
+}
+
+.nav-btn.next:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.nav-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.nav-btn.prev:hover {
+  background-color: #e9ecef;
+}
+
+.nav-btn.next:hover:not(:disabled) {
+  background-color: #43a047;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Pantalla de éxito */
+.feedback-success {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+.success-content {
+  text-align: center;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 2rem;
+}
+
+.success-content h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.redirecting {
+  margin-top: 2rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feedback-container {
+    padding: 1.5rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .star {
+    font-size: 2rem;
+  }
+  
+  .options-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .option-btn {
+    width: 100%;
+  }
+  
+  .like-options {
+    flex-direction: column;
+  }
+  
+  .like-option {
+    width: 100%;
+  }
+}
+
+/* Animación de carga */
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
