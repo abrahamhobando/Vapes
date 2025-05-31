@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import WhatsAppButton from './components/WhatsAppButton';
-import Loader from './components/Loader';
 import InstallPWA from './components/InstallPWA';
 import Menu from './pages/Menu';
 import Products from './pages/Products';
@@ -40,7 +39,6 @@ function App() {
     <CartProvider>
       <Router>
         <ScrollToTop />
-        <Loader />
         <div className="app">
           <Toaster position="bottom-center" />
           <Header />

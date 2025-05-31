@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaShoppingCart, FaPaw } from 'react-icons/fa';
+import { FaBars, FaTimes, FaShoppingCart, FaFire } from 'react-icons/fa';
 import { useCart } from '../context/CartContext';
 import Cart from './Cart';
 import '../styles/Header.css';
@@ -20,8 +20,8 @@ const Header = () => {
       <div className="container header-container">
         <div className="logo">
           <Link to="/">
-            <FaPaw className="logo-icon" style={{color: 'var(--primary-color)', fontSize: '2rem'}} />
-            <span>Pet Care</span>
+            <FaFire className="logo-icon" style={{color: 'var(--primary-color)', fontSize: '2rem'}} />
+            <span>VapeZone</span>
           </Link>
         </div>
 
@@ -33,9 +33,6 @@ const Header = () => {
           <ul className="nav-list">
             <li className="nav-item">
               <Link to="/" onClick={() => setIsOpen(false)}>Inicio</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/menu" onClick={() => setIsOpen(false)}>Servicios</Link>
             </li>
             <li className="nav-item">
               <Link to="/products" onClick={() => setIsOpen(false)}>Productos</Link>

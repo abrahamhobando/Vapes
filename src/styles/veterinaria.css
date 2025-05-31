@@ -1,14 +1,14 @@
 :root {
-  --primary-color: #4A7C59; /* Verde oscuro para transmitir naturaleza y cuidado */
-  --secondary-color: #3A6EA5; /* Azul medio para transmitir confianza y profesionalismo */
-  --accent-color: #C4E0F9; /* Azul claro para acentos y detalles */
-  --text-color: #333333; /* Texto oscuro para buena legibilidad */
-  --background-color: #F5F9FC; /* Fondo claro con tono azulado suave */
+  --primary-color: #6B46C1; /* Púrpura vibrante para modernidad y tecnología */
+  --secondary-color: #EC4899; /* Rosa eléctrico para contraste y energía */
+  --accent-color: #3B82F6; /* Azul brillante para acentos tecnológicos */
+  --text-color: #1F2937; /* Texto oscuro para buena legibilidad */
+  --background-color: #F8FAFC; /* Fondo claro y limpio */
   --font-primary: 'Montserrat', sans-serif;
   --font-secondary: 'Poppins', sans-serif;
   --card-bg: #FFFFFF;
-  --border-radius: 12px;
-  --card-shadow: 0 8px 20px rgba(58, 110, 165, 0.15);
+  --border-radius: 16px;
+  --card-shadow: 0 8px 20px rgba(107, 70, 193, 0.15);
   --hover-transform: translateY(-5px);
 }
 
@@ -16,7 +16,7 @@
 .hero-section {
   position: relative;
   height: 350px;
-  background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'); /* Imagen de perros felices */
+  background-image: url('https://images.unsplash.com/photo-1607734834519-d8576ae60ea4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80'); /* Imagen moderna de tecnología */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -35,7 +35,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(58, 110, 165, 0.6), rgba(74, 124, 89, 0.8));
+  background: linear-gradient(rgba(107, 70, 193, 0.6), rgba(59, 130, 246, 0.8));
   z-index: 1;
 }
 
@@ -156,7 +156,7 @@
 
 /* Estilos para CTA */
 .cta-section {
-  background-image: linear-gradient(rgba(58, 110, 165, 0.8), rgba(74, 124, 89, 0.9)), url('https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'); /* Imagen de veterinario con mascota */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://png.pngtree.com/background/20230524/original/pngtree-many-different-colored-smoke-pens-arranged-on-a-black-floor-picture-image_2712086.jpg'); /* Imagen de vapes */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -69,20 +69,20 @@ const Home = () => {
     {
       id: 1,
       name: 'María Rodríguez',
-      text: 'El cuidado que recibió mi perrito fue excepcional. El servicio de baño y peluquería dejó a mi mascota irreconocible de lo hermoso que quedó.',
+      text: 'Los sabores de los líquidos son increíbles y la calidad del vapor es excepcional. VapeZone se ha convertido en mi tienda favorita.',
       rating: 5
     },
     {
       id: 2,
       name: 'Carlos Méndez',
-      text: 'Dejé a mi mascota en el hotel canino durante mis vacaciones y regresó feliz y bien cuidado. La atención personalizada me dio mucha tranquilidad.',
+      text: 'Compré mi primer vape aquí y el asesoramiento fue perfecto. Los dispositivos son de alta calidad y duran mucho tiempo.',
       rating: 5
     },
     {
       id: 3,
       name: 'Laura Jiménez',
-      text: 'Los productos que venden son de excelente calidad. Mi lugar de confianza para todo lo que necesita mi mascota.',
-      rating: 4
+      text: 'Excelente variedad de productos y marcas reconocidas. El servicio al cliente es de primera y siempre tienen las últimas novedades.',
+      rating: 5
     }
   ];
 
@@ -99,20 +99,20 @@ const Home = () => {
     <div className="home-page">
       <SEO 
         title="Inicio" 
-        description="Panadería artesanal especializada en pan sin levadura. Descubre nuestros productos frescos elaborados con ingredientes naturales y técnicas tradicionales ancestrales."
+        description="VapeZone - Tu tienda especializada en vapes y líquidos premium. Descubre la mejor selección de dispositivos de vapeo, e-liquids y accesorios de las marcas más reconocidas."
       />
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1>Dariel Pet Care</h1>
-          <p>Cuidado profesional y personalizado para el bienestar de tu mascota</p>
+          <h1>VapeZone</h1>
+          <p>Los mejores vapes y líquidos premium para tu experiencia perfecta</p>
           <div className="hero-buttons">
             <Link to="/menu" className="cta-button">
-              Nuestros Servicios <FaArrowRight className="arrow-icon" />
+              Ver Productos <FaArrowRight className="arrow-icon" />
             </Link>
             <Link to="/contact" className="cta-button secondary">
-              Agendar Cita <FaArrowRight className="arrow-icon" />
+              Explorar Catálogo <FaArrowRight className="arrow-icon" />
             </Link>
           </div>
         </div>
@@ -121,12 +121,12 @@ const Home = () => {
       {/* Servicios Section */}
       <section className="section promotions-section">
         <div className="container">
-          <h2 className="section-title">Nuestros Servicios</h2>
+          <h2 className="section-title">Productos Destacados</h2>
           <div className="promotions-grid">
             {isLoading ? (
               <p>Cargando servicios...</p>
             ) : (
-              // Mostrar solo los primeros 3 servicios
+              // Mostrar solo los primeros 3 productos
               servicios.length > 0 ? (
                 servicios.slice(0, 3).map((servicio) => (
                   <div className="promo-card" key={servicio.id}>
@@ -144,12 +144,12 @@ const Home = () => {
                   </div>
                 ))
               ) : (
-                <p>No hay servicios disponibles en este momento.</p>
+                <p>No hay productos disponibles en este momento.</p>
               )
             )}
           </div>
           <div className="view-all-container">
-            <Link to="/menu" className="view-all-button">Ver Todos los Servicios</Link>
+            <Link to="/menu" className="view-all-button">Ver Todos los Productos</Link>
           </div>
         </div>
       </section>
@@ -157,7 +157,7 @@ const Home = () => {
       {/* Productos para tu Mascota Section */}
       <section className="section featured-section">
         <div className="container">
-          <h2 className="section-title">Productos para tu Mascota</h2>
+          <h2 className="section-title">Líquidos y Accesorios</h2>
           <div className="featured-grid">
             {isLoading ? (
               <p>Cargando productos...</p>
@@ -185,7 +185,7 @@ const Home = () => {
             )}
           </div>
           <div className="view-all-container">
-            <Link to="/products" className="view-all-button">Ver Todos los Productos</Link>
+            <Link to="/products" className="view-all-button">Ver Todo el Catálogo</Link>
           </div>
         </div>
       </section>
@@ -211,16 +211,12 @@ const Home = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="section cta-section" style={{ 
-        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
+      <section className="section cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>¿Tu mascota merece lo mejor?</h2>
-            <p>Agenda una cita hoy mismo y bríndale el cuidado que se merece</p>
-            <Link to="/contact" className="cta-button large">Agendar Cita</Link>
+            <h2>¿Buscas la mejor experiencia de vapeo?</h2>
+            <p>Descubre nuestra selección premium de vapes y líquidos de las mejores marcas</p>
+            <Link to="/products" className="cta-button large">Explorar Catálogo</Link>
           </div>
         </div>
       </section>
