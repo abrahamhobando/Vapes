@@ -12,7 +12,6 @@ import Products from './pages/Products';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
-import Blog from './pages/Blog';
 import Feedback from './pages/Feedback';
 import Admin from './pages/Admin';
 import AdminLogin from './pages/AdminLogin'; // Importar AdminLogin
@@ -49,7 +48,6 @@ function App() {
               <Route path="/products" element={<Products />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
               <Route path="/feedback" element={<Feedback />} />
               <Route path="/login" element={<AdminLogin setIsAuthenticated={setIsAuthenticated} />} />
               <Route 

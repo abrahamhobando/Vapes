@@ -149,7 +149,7 @@ const Home = () => {
             )}
           </div>
           <div className="view-all-container">
-            <Link to="/menu" className="view-all-button">Ver Todos los Productos</Link>
+            <Link to="/products" className="view-all-button">Ver Todos los Productos</Link>
           </div>
         </div>
       </section>

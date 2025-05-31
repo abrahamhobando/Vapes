@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaPaw, FaInstagram, FaFacebook, FaTiktok, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaVape, FaInstagram, FaFacebook, FaTiktok, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -10,10 +10,10 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-logo">
           <Link to="/">
-            <FaPaw className="logo-icon" style={{color: 'var(--primary-color)'}} />
-            <span>Dariel Pet Care</span>
+            <FaVape className="logo-icon" style={{color: 'var(--primary-color)'}} />
+            <span>Vapes Premium</span>
           </Link>
-          <p>Cuidado profesional y amor para tu mascota</p>
+          <p>Los mejores productos de vapeo para ti</p>
         </div>
 
         <div className="footer-links">
@@ -22,7 +22,6 @@ const Footer = () => {
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/menu">Servicios</Link></li>
             <li><Link to="/menu">Productos</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
             <li><Link to="/about">Nosotros</Link></li>
             <li><Link to="/contact">Contacto</Link></li>
           </ul>
@@ -61,7 +60,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Dariel Pet Care. Todos los derechos reservados.</p>
+        <p>&copy; {currentYear} Vapes Premium. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
