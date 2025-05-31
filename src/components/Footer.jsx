@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaSmokingBan, FaInstagram, FaFacebook, FaTiktok, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFire, FaInstagram, FaFacebook, FaTiktok, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -10,19 +10,17 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-logo">
           <Link to="/">
-            <FaSmokingBan className="logo-icon" style={{color: 'var(--primary-color)'}} />
-            <span>Vapes Premium</span>
+            <FaFire className="logo-icon" style={{color: 'var(--primary-color)'}} />
+            <span>3 de Espadas</span>
           </Link>
-          <p>Los mejores productos de vapeo para ti</p>
+          <p>Tu tienda de vapeo de confianza</p>
         </div>
 
         <div className="footer-links">
           <h3>Enlaces Rápidos</h3>
           <ul>
             <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/menu">Servicios</Link></li>
             <li><Link to="/menu">Productos</Link></li>
-            <li><Link to="/about">Nosotros</Link></li>
             <li><Link to="/contact">Contacto</Link></li>
           </ul>
         </div>
@@ -60,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Vapes Premium. Todos los derechos reservados.</p>
+        <p>&copy; {currentYear} 3 de Espadas. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

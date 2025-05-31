@@ -111,9 +111,6 @@ const Home = () => {
             <Link to="/menu" className="cta-button">
               Ver Productos <FaArrowRight className="arrow-icon" />
             </Link>
-            <Link to="/contact" className="cta-button secondary">
-              Explorar Catálogo <FaArrowRight className="arrow-icon" />
-            </Link>
           </div>
         </div>
       </section>
@@ -154,41 +151,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Productos para tu Mascota Section */}
-      <section className="section featured-section">
-        <div className="container">
-          <h2 className="section-title">Líquidos y Accesorios</h2>
-          <div className="featured-grid">
-            {isLoading ? (
-              <p>Cargando productos...</p>
-            ) : productos.length > 0 ? (
-              productos.slice(0, 6).map((product) => (
-                <div className="product-card" key={product.id}>
-                  <div className="product-image">
-                    <img src={product.image} alt={product.name} />
-                    {product.invent > 0 && product.invent <= 5 && (
-                      <div className="low-stock-tag">Pocas unidades</div>
-                    )}
-                  </div>
-                  <div className="product-info">
-                    <h3>{product.name}</h3>
-                    <p className="product-description">{product.description}</p>
-                    <div className="product-price-row">
-                      <span className="product-price">₡{product.price.toLocaleString()}</span>
-                      <button onClick={(e) => addToCart(product, e.currentTarget)} className="add-to-cart-btn">Agregar</button>
-                    </div>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <p>No hay productos disponibles en este momento.</p>
-            )}
-          </div>
-          <div className="view-all-container">
-            <Link to="/products" className="view-all-button">Ver Todo el Catálogo</Link>
-          </div>
-        </div>
-      </section>
+
 
 
       {/* Testimonials Section */}

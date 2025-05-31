@@ -21,7 +21,7 @@ const Header = () => {
         <div className="logo">
           <Link to="/">
             <FaFire className="logo-icon" style={{color: 'var(--primary-color)', fontSize: '2rem'}} />
-            <span>VapeZone</span>
+            <span>3 de Espadas</span>
           </Link>
         </div>
 
@@ -37,9 +37,7 @@ const Header = () => {
             <li className="nav-item">
               <Link to="/products" onClick={() => setIsOpen(false)}>Productos</Link>
             </li>
-            <li className="nav-item">
-              <Link to="/about" onClick={() => setIsOpen(false)}>Nosotros</Link>
-            </li>
+
             <li className="nav-item">
               <Link to="/contact" onClick={() => setIsOpen(false)}>Contacto</Link>
             </li>
