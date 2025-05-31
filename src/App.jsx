@@ -11,7 +11,7 @@ import Menu from './pages/Menu';
 import Products from './pages/Products';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import About from './pages/About';
+// About page removed
 import Feedback from './pages/Feedback';
 import Admin from './pages/Admin';
 import AdminLogin from './pages/AdminLogin'; // Importar AdminLogin
@@ -46,7 +46,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/about" element={<About />} />
+              {/* About route removed */}
               <Route path="/contact" element={<Contact />} />
               <Route path="/feedback" element={<Feedback />} />
               <Route path="/login" element={<AdminLogin setIsAuthenticated={setIsAuthenticated} />} />
