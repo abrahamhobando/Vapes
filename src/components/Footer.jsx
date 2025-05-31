@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaVape, FaInstagram, FaFacebook, FaTiktok, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaSmokingBan, FaInstagram, FaFacebook, FaTiktok, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-logo">
           <Link to="/">
-            <FaVape className="logo-icon" style={{color: 'var(--primary-color)'}} />
+            <FaSmokingBan className="logo-icon" style={{color: 'var(--primary-color)'}} />
             <span>Vapes Premium</span>
           </Link>
           <p>Los mejores productos de vapeo para ti</p>
