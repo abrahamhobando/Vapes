@@ -102,7 +102,14 @@ const Home = () => {
         description="VapeZone - Tu tienda especializada en vapes y líquidos premium. Descubre la mejor selección de dispositivos de vapeo, e-liquids y accesorios de las marcas más reconocidas."
       />
       {/* Hero Section */}
-      <section className="hero-section">
+      <section 
+        className="hero-section"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.squarespace-cdn.com/content/v1/533b071fe4b09aaebbe248d4/1563742633916-WJAHJS5JW2IO6BT7UIMF/black-background-vape.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>VapeZone</h1>

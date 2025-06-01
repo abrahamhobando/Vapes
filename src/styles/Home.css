@@ -2,10 +2,8 @@
 
 /* Hero Section - Neon Styled */
 .hero-section {
-  height: 600px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.squarespace-cdn.com/content/v1/533b071fe4b09aaebbe248d4/1563742633916-WJAHJS5JW2IO6BT7UIMF/black-background-vape.jpg');
-  background-size: cover;
-  background-position: center;
+  height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +11,11 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  background-color: #000;
+  margin-top: 0; /* Sin margen superior */
+  padding-top: 70px; /* Solo padding para compensar el header */
 }
 
 .hero-section::after {

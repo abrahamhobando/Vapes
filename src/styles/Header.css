@@ -1,12 +1,14 @@
 .header {
   background-color: var(--header-bg);
   padding: 1rem 0;
-  position: sticky;
+  position: fixed; /* Cambiado a fixed para asegurar que esté arriba */
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(0, 255, 201, 0.1);
-  position: relative;
+  margin: 0;
 }
 
 .header::after {
