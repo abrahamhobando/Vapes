@@ -1,10 +1,9 @@
 /* Home Page Styles */
 
-/* Hero Section */
+/* Hero Section - Neon Styled */
 .hero-section {
-  position: relative;
   height: 500px;
-  background-image: url('https://www.mainedentalclinic.com/wp-content/uploads/vaping-guy-explosion-background.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/hero.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12,9 +11,25 @@
   justify-content: center;
   color: white;
   text-align: center;
-  margin-bottom: 3rem;
-  border-radius: 0 0 30px 30px;
+  position: relative;
   overflow: hidden;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  animation: glow 3s infinite;
+}
+
+@keyframes glow {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
 }
 
 .hero-overlay {
@@ -23,36 +38,41 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
-  z-index: 1;
+  background-color: rgba(5, 5, 5, 0.7);
+  box-shadow: inset 0 0 100px rgba(0, 255, 201, 0.1);
 }
 
 .hero-content {
-  position: relative;
   z-index: 2;
   max-width: 800px;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+  position: relative;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  background: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 201, 0.5));
+  letter-spacing: 2px;
 }
 
 .hero-content p {
   font-size: 1.3rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.5rem;
+  color: var(--text-color-highlight);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  letter-spacing: 1px;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .cta-button {
@@ -101,6 +121,7 @@
   margin-bottom: 2.5rem;
   position: relative;
   padding-bottom: 1rem;
+  color: var(--primary-color); /* Gold for section titles */
 }
 
 .section-title::after {
@@ -117,7 +138,7 @@
 
 /* Promotions Section */
 .promotions-section {
-  background-color: #f9f9f9;
+  background-color: var(--background-color); /* Dark theme background */
   padding: 5rem 0;
 }
 
@@ -128,14 +149,18 @@
 }
 
 .promo-card {
-  background-color: white;
-  border-radius: 15px;
+  background-color: var(--card-bg); /* Dark theme card background */
+  border-radius: var(--card-radius); /* Consistent card radius */
   overflow: hidden;
   transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
 }
 
 .promo-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px); /* Slightly less than -10px to match Menu.css */
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
 }
 
 .promo-image {
@@ -160,11 +185,12 @@
   top: 15px;
   right: 15px;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-on-primary); /* Black text on gold */
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-weight: 600;
   font-size: 0.9rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .promo-content {
@@ -174,42 +200,77 @@
 .promo-content h3 {
   font-size: 1.5rem;
   margin-bottom: 0.8rem;
-  color: var(--text-color);
+  color: var(--primary-color); /* Gold for titles */
 }
 
 .promo-content p {
-  color: #666;
+  color: var(--text-color-secondary);
   margin-bottom: 1rem;
   line-height: 1.5;
 }
 
 .valid-until {
   font-size: 0.9rem;
-  color: #888;
+  color: var(--text-color-secondary-muted);
   font-style: italic;
   margin-bottom: 1.5rem;
 }
 
 .promo-button {
   display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
+  background-color: transparent;
+  color: var(--tertiary-color);
   padding: 0.7rem 1.5rem;
-  border-radius: 30px;
+  border-radius: var(--button-radius);
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--tertiary-color);
+  box-shadow: var(--tertiary-color-glow);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.promo-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--tertiary-color);
+  transition: all 0.3s ease;
+  z-index: -1;
 }
 
 .promo-button:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-2px);
-  color: white;
+  color: var(--text-on-primary);
+  transform: translateY(-3px);
 }
 
-/* Featured Products Section */
+.promo-button:hover::before {
+  width: 100%;
+}
+
+/* Featured Products Section - Neon Styled */
 .featured-section {
   padding: 5rem 0;
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.featured-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  opacity: 0.6;
 }
 
 .featured-grid {
@@ -220,14 +281,18 @@
 }
 
 .product-card {
-  background-color: white;
-  border-radius: 15px;
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
   overflow: hidden;
   transition: all 0.3s ease;
+  border: 1px solid rgba(0, 255, 201, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product-card:hover {
   transform: translateY(-8px);
+  border-color: var(--primary-color);
+  box-shadow: var(--primary-color-glow);
 }
 
 .product-image {
@@ -253,11 +318,12 @@
 .product-info h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: var(--text-color);
+  color: var(--text-color-highlight);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
 .product-description {
-  color: #666;
+  color: var(--text-color);
   font-size: 0.9rem;
   margin-bottom: 1.2rem;
   line-height: 1.4;
@@ -273,6 +339,7 @@
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--primary-color);
+  text-shadow: var(--primary-color-glow);
 }
 
 .add-to-cart-btn {
@@ -296,28 +363,91 @@
 }
 
 .view-all-button {
-  display: inline-block;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--accent-color);
   padding: 0.8rem 2rem;
-  border-radius: 30px;
+  border-radius: var(--button-radius);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
+  border: 2px solid var(--accent-color);
+  box-shadow: var(--accent-color-glow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 0.8rem 2rem;
+  border-radius: var(--button-radius);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+  box-shadow: var(--primary-color-glow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.cta-button:hover {
+  color: var(--text-on-primary);
+  transform: translateY(-3px);
+}
+
+.cta-button:hover::before {
+  width: 100%;
+}
+
+.view-all-button:hover::before {
+  width: 100%;
 }
 
 .view-all-button:hover {
-  background-color: black;
-  color: var(--primary-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: var(--text-on-primary);
+  transform: translateY(-3px);
 }
 
-/* Testimonials Section */
+/* Testimonials Section - Neon Styled */
 .testimonials-section {
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   padding: 5rem 0;
+  position: relative;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--tertiary-color), transparent);
+  opacity: 0.6;
 }
 
 .testimonials-grid {
@@ -327,28 +457,34 @@
 }
 
 .testimonial-card {
-  background-color: white;
-  border-radius: 15px;
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
   padding: 2rem;
   transition: all 0.3s ease;
   position: relative;
+  border: 1px solid rgba(157, 0, 255, 0.3);
+  box-shadow: 0 0 15px rgba(157, 0, 255, 0.1);
 }
 
 .testimonial-card:hover {
   transform: translateY(-5px);
+  border-color: var(--tertiary-color);
+  box-shadow: var(--tertiary-color-glow);
 }
 
 .quote-icon {
-  color: var(--primary-color);
+  color: var(--tertiary-color);
   font-size: 1.8rem;
-  opacity: 0.2;
+  opacity: 0.8;
   margin-bottom: 1rem;
+  filter: drop-shadow(0 0 5px var(--tertiary-color));
 }
 
 .testimonial-text {
   font-style: italic;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  color: var(--text-color);
 }
 
 .testimonial-rating {
@@ -358,39 +494,61 @@
 }
 
 .star-icon {
-  color: var(--accent-color);
+  color: var(--primary-color);
   font-size: 1.2rem;
+  filter: drop-shadow(0 0 3px var(--primary-color));
 }
 
 .testimonial-name {
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--text-color-highlight);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
-/* Call to Action Section */
+/* Call to Action Section - Neon Styled */
 .cta-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.fastcompany.com/image/upload/f_auto,q_auto,c_fit/wp-cms/uploads/2018/01/p-1-turns-out-vaping-can-be-addictive-too.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.fastcompany.com/image/upload/f_auto,q_auto,c_fit/wp-cms/uploads/2018/01/p-1-turns-out-vaping-can-be-addictive-too.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: white;
   text-align: center;
   padding: 6rem 0;
-  border-radius: 15px;
+  border-radius: var(--card-radius);
   margin: 0 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 0, 228, 0.15), transparent 60%);
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .cta-content h2 {
   font-size: 2.8rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 201, 0.3));
+  font-weight: 800;
 }
 
 .cta-content p {
   font-size: 1.2rem;
   max-width: 600px;
-  margin: 0 auto 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin: 0 auto 2.5rem;
+  color: var(--text-color-highlight);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Design */

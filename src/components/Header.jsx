@@ -4,7 +4,6 @@ import { FaBars, FaTimes, FaShoppingCart, FaFire } from 'react-icons/fa';
 import { useCart } from '../context/CartContext';
 import Cart from './Cart';
 import '../styles/Header.css';
-import '../styles/veterinaria.css';
 import logoImage from '../assets/images/LOGO Da.png';
 
 const Header = () => {

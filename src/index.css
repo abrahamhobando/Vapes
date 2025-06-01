@@ -1,16 +1,77 @@
 :root {
-  --primary-color: #FFD700; /* Amarillo/dorado como en el logo */
-  --secondary-color: #000000; /* Negro para contraste con el dorado */
-  --accent-color: #E6C200; /* Dorado más oscuro para acentos */
-  --text-color: #1F2937; /* Texto oscuro para buena legibilidad */
-  --background-color: #F8FAFC; /* Fondo claro y limpio */
-  --button-text: #000000; /* Texto negro para botones */
-  --button-bg: #FFD700; /* Fondo dorado para botones */
-  --button-hover: #E6C200; /* Color hover para botones */
+  /* Primary Neon Colors */
+  --primary-color: #00FFC9;        /* Bright Cyan neon for primary elements */
+  --primary-color-glow: 0 0 10px #00FFC9, 0 0 20px rgba(0, 255, 201, 0.5); /* Glow effect for primary */
+  
+  --accent-color: #FF00E4;         /* Vibrant Magenta neon for accents */
+  --accent-color-glow: 0 0 10px #FF00E4, 0 0 20px rgba(255, 0, 228, 0.5); /* Glow for accent */
+  
+  --tertiary-color: #9D00FF;       /* Purple neon as third color */
+  --tertiary-color-glow: 0 0 10px #9D00FF, 0 0 20px rgba(157, 0, 255, 0.5); /* Glow for tertiary */
+
+  /* Dark Theme Backgrounds */
+  --background-color: #050505;     /* Almost black for main background */
+  --card-bg: #111111;              /* Very dark gray for cards, modals, etc. */
+  --header-bg: #0A0A0A;            /* Specific dark for header */
+  --footer-bg: #0A0A0A;            /* Specific dark for footer */
+  
+  /* Button Colors */
+  --button-primary-bg: transparent;      /* Transparent background for neon effect */
+  --button-primary-text: var(--primary-color);  /* Cyan text */
+  --button-primary-border: var(--primary-color); /* Cyan border */
+  --button-primary-glow: var(--primary-color-glow); /* Cyan glow */
+  
+  --button-primary-hover-bg: var(--primary-color); /* Fill with color on hover */
+  --button-primary-hover-text: #000000; /* Black text on cyan */
+  
+  --button-secondary-bg: transparent;             /* Transparent for neon effect */
+  --button-secondary-text: var(--accent-color);    /* Magenta text */
+  --button-secondary-border: var(--accent-color);  /* Magenta border */
+  --button-secondary-glow: var(--accent-color-glow); /* Magenta glow */
+  
+  --button-secondary-hover-bg: var(--accent-color); /* Fill with color on hover */
+  --button-secondary-hover-text: #000000;        /* Black text on magenta */
+  
+  /* Text Colors */
+  --text-color: #E0E0E0;              /* Light gray for main text */
+  --text-color-secondary: #AAAAAA;    /* Slightly darker for secondary text */
+  --text-color-secondary-muted: #777777; /* Even darker gray for muted text */
+  --text-color-highlight: #FFFFFF;    /* Bright white for highlights */
+  --text-on-primary: #000000;         /* Black text on bright backgrounds */
+  
+  /* Special Elements */
+  --success-color: #00FF9D;           /* Neon green */
+  --success-glow: 0 0 10px rgba(0, 255, 157, 0.7); /* Success glow */
+  
+  --error-color: #FF3366;             /* Neon pink/red */
+  --error-glow: 0 0 10px rgba(255, 51, 102, 0.7); /* Error glow */
+  
+  --warning-color: #FFDB00;           /* Neon yellow */
+  --warning-glow: 0 0 10px rgba(255, 219, 0, 0.7); /* Warning glow */
+  
+  --info-color: #00AAFF;              /* Neon blue */
+  --info-glow: 0 0 10px rgba(0, 170, 255, 0.7); /* Info glow */
+  
+  /* Borders */
+  --border-color: #333333;           /* Standard borders */
+  --border-color-muted: #222222;      /* More subtle borders */
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.7);
+  
+  /* Neon Highlights */
+  --neon-highlight: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+  
+  /* Other */
+  --card-radius: 12px;           /* Consistent card radius */
+  --button-radius: 30px;          /* Consistent button radius for pill shape */
+  --transition-speed: 0.3s;       /* Consistent transition speed */
+  
+  /* Font Families */
   --font-primary: 'Montserrat', sans-serif;
   --font-secondary: 'Poppins', sans-serif;
-  --card-bg: #FFFFFF;
-  --border-radius: 16px;
 }
 
 * {

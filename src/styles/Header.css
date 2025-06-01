@@ -1,6 +1,7 @@
 .header {
-  background-color: var(--background-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--header-bg); /* Use specific header background */
+  box-shadow: var(--shadow-sm); /* Subtle shadow for dark theme */
+  border-bottom: 1px solid var(--border-color); /* Add a bottom border */
   position: fixed;
   top: 0;
   left: 0;
@@ -42,7 +43,7 @@
 .nav-item a {
   font-weight: 600;
   font-size: 1rem;
-  color: var(--text-color);
+  color: var(--text-color-highlight); /* Brighter default color for nav links */
   position: relative;
 }
 
@@ -70,6 +71,40 @@
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--primary-color);
+}
+
+/* Cart Badge Styles */
+.cart-badge {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-badge svg {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: var(--primary-color); /* Gold cart icon */
+  transition: color 0.3s ease;
+}
+
+.cart-badge:hover svg {
+  color: var(--accent-color); /* Darker gold on hover */
+}
+
+.cart-badge .count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: var(--accent-color); /* Or a distinct notification color */
+  color: var(--text-on-primary);
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 1px solid var(--header-bg); /* Helps separate from icon if overlapping */
+  min-width: 20px;
+  text-align: center;
+  line-height: 1.2;
 }
 
 @media (max-width: 768px) {
@@ -103,11 +138,12 @@
 
   .nav {
     position: fixed;
-    top: 70px;
+    top: 70px; /* Adjust if header height changes */
     left: 0;
     width: 100%;
-    background-color: var(--background-color);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--header-bg); /* Consistent mobile menu background */
+    box-shadow: var(--shadow-md); /* Consistent shadow for dropdown */
+    border-top: 1px solid var(--border-color);
     padding: 1rem 0;
     transform: translateY(-100%);
     opacity: 0;

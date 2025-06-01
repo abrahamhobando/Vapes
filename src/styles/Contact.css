@@ -1,59 +1,53 @@
-:root {
-  --whatsapp-color: #25D366;
-  --whatsapp-hover: #128C7E;
-}
+/* Contact.css - Dark Theme */
 
 /* Contact Hero Section */
 .contact-hero-section {
   position: relative;
   height: 300px;
-  background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/contact-hero.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-align: center;
-  margin-bottom: 2rem;
-  border-radius: 0 0 30px 30px;
+  margin-bottom: 4rem;
   overflow: hidden;
 }
 
-.contact-hero-overlay {
+.contact-hero::after {
+  content: '';
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
-  z-index: 1;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  animation: glow 3s infinite;
 }
 
-.contact-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 0 1rem;
+@keyframes glow {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
 }
 
-.contact-hero-content h1 {
+.contact-hero h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  z-index: 1;
+  font-weight: 800;
+  background: linear-gradient(to right, var(--accent-color), var(--tertiary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 228, 0.5));
+  letter-spacing: 2px;
 }
 
-.contact-hero-content p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* Contact Section */
+/* Contact Section General */
 .contact-section {
-  padding: 4rem 0;
+  padding: 3rem 0;
+  background-color: var(--background-color);
 }
 
 .contact-grid {
@@ -67,41 +61,38 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .contact-info h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
-  color: var(--text-color);
+  color: var(--primary-color); /* Gold heading */
 }
 
 .contact-methods {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-}
-
-.contact-method {
-  display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
 
 .contact-icon {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--primary-color);
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
 }
 
 .contact-method h3 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.4rem 0;
   font-size: 1.2rem;
+  color: var(--text-color); /* Light text for subheadings */
 }
 
 .contact-method a,
 .contact-method p {
-  color: #666;
+  color: var(--text-color-secondary); /* Lighter gray text */
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -111,149 +102,178 @@
 
 /* Social Links */
 .social-links {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .social-links h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
+  color: var(--text-color);
 }
 
 .social-icons {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .social-icons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #f5f5f5;
+  width: 45px;
+  height: 45px;
+  background-color: var(--card-bg); /* Dark card background */
   border-radius: 50%;
-  color: #666;
-  font-size: 1.2rem;
+  color: var(--text-color-secondary); /* Light icon color */
+  font-size: 1.3rem;
   transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .social-icons a:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-on-primary);
   transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+  border-color: var(--primary-color);
 }
 
 /* Contact Form */
 .contact-form-container {
-  background-color: white;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-md);
+  padding: 2.5rem;
+  height: 100%;
+  border: 1px solid rgba(255, 0, 228, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+  opacity: 0.7;
 }
 
 .contact-form-container h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color); /* Gold heading */
+  text-align: center;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .form-group label {
   font-weight: 600;
-  color: #555;
+  color: var(--text-color-secondary); /* Light gray label */
+  font-size: 0.9rem;
 }
 
 .form-group input,
 .form-group textarea {
-  padding: 0.8rem 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  padding: 0.9rem 1.2rem;
+  background-color: var(--background-color); /* Darker input background */
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-small);
   font-family: var(--font-primary);
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  color: var(--text-color); /* Light input text */
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-color-secondary-muted, #888); /* Muted placeholder */
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2); /* Gold focus ring */
+  background-color: var(--card-bg); /* Slightly lighter on focus */
 }
 
 .submit-btn {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1rem;
-  border-radius: 8px;
+  background-color: transparent;
+  color: var(--accent-color);
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--accent-color);
+  border-radius: var(--button-radius);
   font-weight: 600;
   font-size: 1rem;
+  cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 1rem;
-  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--accent-color-glow);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: all 0.3s ease;
+  z-index: -1;
 }
 
 .submit-btn:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-2px);
+  color: var(--text-on-primary);
+  transform: translateY(-3px);
+}
+
+.submit-btn:hover::before {
+  width: 100%;
 }
 
 /* Map Section */
 .map-section {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .map-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color); /* Gold heading */
 }
 
 .map-container {
-  border-radius: 15px;
+  height: 450px;
+  border-radius: var(--card-radius);
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-button {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  background-color: var(--whatsapp-color);
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-  z-index: 100;
-  transition: all 0.3s ease;
-}
-
-.whatsapp-icon {
-  font-size: 1.5rem;
-}
-
-.whatsapp-button:hover {
-  background-color: var(--whatsapp-hover);
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+@media (max-width: 992px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
