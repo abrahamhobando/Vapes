@@ -59,19 +59,45 @@
 .category-filters {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 0.8rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  /* Estilo básico para todas las pantallas */
+  flex-wrap: wrap;
+}
+
+/* Estilos para móviles - scroll horizontal */
+@media (max-width: 768px) {
+  .category-filters {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .category-filters::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .category-filters::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--tertiary-color), var(--primary-color));
+    border-radius: 4px;
+  }
 }
 
 .category-btn {
-  padding: 0.8rem 1.8rem;
+  padding: 0.5rem 1.2rem; /* Tamaño reducido */
   background-color: transparent;
   color: var(--tertiary-color);
   border-radius: var(--button-radius);
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* Tamaño de fuente reducido */
   transition: all 0.3s ease;
-  border: 2px solid var(--tertiary-color);
+  border: 1px solid var(--tertiary-color); /* Borde más delgado */
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -82,7 +108,8 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.4rem; /* Espacio reducido entre icono y texto */
+  min-width: fit-content; /* Para evitar que el texto se rompa */
 }
 
 .category-btn::before {
@@ -190,14 +217,14 @@
 }
 
 .add-to-cart-btn {
-  background-color: transparent;
-  color: var(--accent-color);
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro para mejorar contraste */
+  color: white; /* Texto blanco para mejor legibilidad */
   padding: 0.5rem 1.2rem;
   border-radius: var(--button-radius);
-  font-weight: 600;
+  font-weight: 700; /* Más grueso para destacar */
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -208,6 +235,7 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra para mejorar legibilidad */
 }
 
 .add-to-cart-btn::before {
@@ -236,9 +264,9 @@
 }
 
 .add-to-cart-btn:hover {
-  background-color: var(--button-primary-hover-bg); /* Darker Gold */
-  color: var(--button-primary-hover-text);       /* Black */
-  transform: translateY(-3px);
+  color: black; /* Color oscuro sobre fondo magenta para mejor contraste */
+  text-shadow: none; /* Eliminar sombra en hover para mejor legibilidad */
+  transform: translateY(-2px); /* Efecto de elevación */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Consistent shadow */
 }
 
