@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import WhatsAppButton from './components/WhatsAppButton';
 import InstallPWA from './components/InstallPWA';
+import AgeVerification from './components/AgeVerification';
 import Menu from './pages/Menu';
 import Products from './pages/Products';
 import Home from './pages/Home';
@@ -17,6 +18,7 @@ import Admin from './pages/Admin';
 import AdminLogin from './pages/AdminLogin'; // Importar AdminLogin
 import './App.css';
 import './styles/CartAnimation.css';
+import './styles/AgeVerification.css';
 
 const ProtectedRoute = ({ isAuthenticated, children }) => {
   if (!isAuthenticated) {
@@ -39,6 +41,7 @@ function App() {
       <Router>
         <ScrollToTop />
         <div className="app">
+          <AgeVerification />
           <Toaster position="bottom-center" />
           <Header />
           <main className="main-content">
