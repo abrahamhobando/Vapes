@@ -105,12 +105,14 @@ const Home = () => {
       <section 
         className="hero-section"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.squarespace-cdn.com/content/v1/533b071fe4b09aaebbe248d4/1563742633916-WJAHJS5JW2IO6BT7UIMF/black-background-vape.jpg")',
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.squarespace-cdn.com/content/v1/533b071fe4b09aaebbe248d4/1563742633916-WJAHJS5JW2IO6BT7UIMF/black-background-vape.jpg")',
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          marginTop: '0',
+          paddingTop: '70px'
         }}
       >
-        <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>VapeZone</h1>
           <p>Los mejores vapes y líquidos premium para tu experiencia perfecta</p>
