@@ -182,20 +182,26 @@
 
 .form-group label {
   font-weight: 600;
-  color: var(--text-color-secondary); /* Light gray label */
-  font-size: 0.9rem;
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 5px rgba(255, 0, 228, 0.3);
 }
 
 .form-group input,
-.form-group textarea {
-  padding: 0.9rem 1.2rem;
-  background-color: var(--background-color); /* Darker input background */
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-small);
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(255, 0, 228, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-color-highlight);
+  border-radius: var(--card-radius);
+  margin-top: 0.5rem;
   font-family: var(--font-primary);
-  font-size: 1rem;
-  color: var(--text-color); /* Light input text */
   transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .form-group input::placeholder,
@@ -204,11 +210,12 @@
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2); /* Gold focus ring */
-  background-color: var(--card-bg); /* Slightly lighter on focus */
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(255, 0, 228, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .submit-btn {
