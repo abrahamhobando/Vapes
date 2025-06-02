@@ -543,8 +543,27 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-section {
-    height: 400px;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 70px; /* Ajusta si tu header es fijo */
   }
+  .hero-content {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   
   .hero-content h1 {
     font-size: 2.5rem;
@@ -571,13 +590,30 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    height: 350px;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 70px; /* Ajusta si tu header es fijo */
   }
-  
+  .hero-content {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
-  
   .hero-content p {
     font-size: 1rem;
     margin-bottom: 1.5rem;

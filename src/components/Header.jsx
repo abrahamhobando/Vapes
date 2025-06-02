@@ -25,9 +25,9 @@ const Header = () => {
         </div>
 
         {/* Menú hamburguesa solo en móvil/tablet */}
-        <div className="mobile-toggle mobile-only" onClick={toggleMenu}>
+        <button className="mobile-toggle" onClick={toggleMenu} aria-label="Abrir menú">
           {isOpen ? <FaTimes /> : <FaBars />}
-        </div>
+        </button>
 
         <nav className={`nav ${isOpen ? 'active' : ''}`}>
           <ul className="nav-list">
