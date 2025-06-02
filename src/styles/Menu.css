@@ -58,12 +58,27 @@
 /* Category Filters */
 .category-filters {
   display: flex;
-  justify-content: center;
-  gap: 0.8rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.7rem;
+  padding: 0.5rem 0 1.5rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+  -webkit-overflow-scrolling: touch;
+  background: none;
   margin-bottom: 2rem;
-  /* Estilo básico para todas las pantallas */
-  flex-wrap: wrap;
 }
+
+.category-filters::-webkit-scrollbar {
+  height: 6px;
+  background: transparent;
+}
+
+.category-filters::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
 
 /* Estilos para móviles - scroll horizontal */
 @media (max-width: 768px) {
@@ -217,30 +232,29 @@
 }
 
 .add-to-cart-btn {
-  background: #111;
+  background: linear-gradient(90deg, #111 80%, var(--primary-color) 100%);
   color: #fff;
   padding: 0.7rem 1.5rem;
   border-radius: 30px;
   font-weight: 800;
   font-size: 1rem;
   border: none;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: none;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
   position: relative;
   z-index: 1;
 }
 
 .add-to-cart-btn:hover, .add-to-cart-btn:focus {
-  background: linear-gradient(90deg, #191919 80%, var(--primary-color) 100%);
+  background: linear-gradient(90deg, #191919 60%, var(--primary-color) 100%);
   color: #fff;
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .add-to-cart-btn .cart-icon {
@@ -248,13 +262,6 @@
   margin-left: 0.5rem;
 }
 
-
-.add-to-cart-btn:hover {
-  color: black; /* Color oscuro sobre fondo magenta para mejor contraste */
-  text-shadow: none; /* Eliminar sombra en hover para mejor legibilidad */
-  transform: translateY(-2px); /* Efecto de elevación */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Consistent shadow */
-}
 
 /* Search Container */
 .search-container {
