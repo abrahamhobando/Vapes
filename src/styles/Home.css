@@ -220,42 +220,28 @@
 }
 
 .promo-button {
-  display: inline-block;
-  background-color: transparent;
-  color: var(--tertiary-color);
+  background-color: #181818;
+  color: #fff;
   padding: 0.7rem 1.5rem;
   border-radius: var(--button-radius);
   font-weight: 600;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  border: none;
+  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border: 2px solid var(--tertiary-color);
-  box-shadow: var(--tertiary-color-glow);
+  box-shadow: none;
   position: relative;
   overflow: hidden;
   z-index: 1;
-}
-
-.promo-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: var(--tertiary-color);
-  transition: all 0.3s ease;
-  z-index: -1;
+  text-shadow: none;
 }
 
 .promo-button:hover {
-  color: var(--text-on-primary);
-  transform: translateY(-3px);
-}
-
-.promo-button:hover::before {
-  width: 100%;
+  background-color: var(--secondary-color);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /* Featured Products Section - Neon Styled */

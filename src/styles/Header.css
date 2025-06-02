@@ -156,12 +156,13 @@
   }
 
   .mobile-toggle {
-    display: block;
-    grid-column: 2;
-    justify-self: flex-end;
-    margin-right: 1rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
+  }
+
+  .mobile-only {
+    display: none !important;
   }
 
   .cart-badge {

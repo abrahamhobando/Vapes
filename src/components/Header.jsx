@@ -24,23 +24,23 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="mobile-toggle" onClick={toggleMenu}>
+        {/* Menú hamburguesa solo en móvil/tablet */}
+        <div className="mobile-toggle mobile-only" onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
 
         <nav className={`nav ${isOpen ? 'active' : ''}`}>
           <ul className="nav-list">
-            <li className="nav-item">
-              <Link to="/" onClick={() => setIsOpen(false)}>Inicio</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/products" onClick={() => setIsOpen(false)}>Productos</Link>
-            </li>
-
-            <li className="nav-item">
-              <Link to="/contact" onClick={() => setIsOpen(false)}>Contacto</Link>
-            </li>
-          </ul>
+  <li className="nav-item">
+    <Link to="/" onClick={() => setIsOpen(false)}>Inicio</Link>
+  </li>
+  <li className="nav-item">
+    <Link to="/products" onClick={() => setIsOpen(false)}>Productos</Link>
+  </li>
+  <li className="nav-item">
+    <Link to="/contact" onClick={() => setIsOpen(false)}>Contacto</Link>
+  </li>
+</ul>
         </nav>
 
         <div className="cart-badge" onClick={toggleCart} ref={cartIconRef}>

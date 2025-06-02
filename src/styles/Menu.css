@@ -217,47 +217,35 @@
 }
 
 .add-to-cart-btn {
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro para mejorar contraste */
-  color: white; /* Texto blanco para mejor legibilidad */
+  background-color: #181818;
+  color: #fff;
   padding: 0.5rem 1.2rem;
   border-radius: var(--button-radius);
-  font-weight: 700; /* Más grueso para destacar */
+  font-weight: 700;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
-  border: 1px solid var(--accent-color);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  border: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   cursor: pointer;
-  box-shadow: var(--accent-color-glow);
+  box-shadow: none;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra para mejorar legibilidad */
-}
-
-.add-to-cart-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: var(--accent-color);
-  transition: all 0.3s ease;
-  z-index: -1;
+  text-shadow: none;
 }
 
 .add-to-cart-btn:hover {
-  color: var(--text-on-primary);
+  background-color: var(--secondary-color);
+  color: #fff;
   transform: translateY(-2px);
 }
 
-.add-to-cart-btn:hover::before {
-  width: 100%;
-}
+/* Efecto ::before eliminado para un estilo más sobrio */
+
 
 .add-to-cart-btn .cart-icon {
   font-size: 1rem; /* Adjusted for slightly smaller button text */

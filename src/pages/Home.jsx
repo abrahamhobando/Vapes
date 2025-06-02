@@ -117,7 +117,7 @@ const Home = () => {
           <h1>VapeZone</h1>
           <p>Los mejores vapes y líquidos premium para tu experiencia perfecta</p>
           <div className="hero-buttons">
-            <Link to="/menu" className="cta-button">
+            <Link to="/products" className="cta-button">
               Ver Productos <FaArrowRight className="arrow-icon" />
             </Link>
           </div>
