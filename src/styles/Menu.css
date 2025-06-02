@@ -1,5 +1,14 @@
 /* Menu.css - Dark Theme Redesign */
 
+/* Fondo personalizado para toda la página de productos */
+body {
+  background-image: linear-gradient(rgba(20,20,20,0.7), rgba(20,20,20,0.8)), url('https://cdn.wallpapersafari.com/15/38/YvwZPC.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
