@@ -1,19 +1,10 @@
 /* Menu.css - Dark Theme Redesign */
 
-/* Fondo personalizado para toda la página de productos */
-body {
-  background-image: linear-gradient(rgba(20,20,20,0.7), rgba(20,20,20,0.8)), url('https://cdn.wallpapersafari.com/15/38/YvwZPC.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
 /* Hero Section */
 .hero-section {
   position: relative;
   height: 350px; /* Consider adjusting or making dynamic */
-  background-image: url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1500&q=80'); /* Example dark abstract */
+  background-image: url('https://cdn.wallpapersafari.com/15/38/YvwZPC.jpg'); /* Example dark abstract */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -226,39 +217,37 @@ body {
 }
 
 .add-to-cart-btn {
-  background-color: #181818;
+  background: #111;
   color: #fff;
-  padding: 0.5rem 1.2rem;
-  border-radius: var(--button-radius);
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 1rem;
   border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   cursor: pointer;
-  box-shadow: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
   position: relative;
-  overflow: hidden;
   z-index: 1;
-  text-shadow: none;
 }
 
-.add-to-cart-btn:hover {
-  background-color: var(--secondary-color);
+.add-to-cart-btn:hover, .add-to-cart-btn:focus {
+  background: linear-gradient(90deg, #191919 80%, var(--primary-color) 100%);
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
-
-/* Efecto ::before eliminado para un estilo más sobrio */
-
 
 .add-to-cart-btn .cart-icon {
-  font-size: 1rem; /* Adjusted for slightly smaller button text */
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
 }
+
 
 .add-to-cart-btn:hover {
   color: black; /* Color oscuro sobre fondo magenta para mejor contraste */
