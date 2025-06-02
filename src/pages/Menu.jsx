@@ -10,6 +10,20 @@ import '../styles/Menu.css';
 import { fetchProducts, getCategories } from '../services/airtableService';
 
 const Menu = () => {
+  const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  const categoryDropdownRef = useRef(null);
+
+  useEffect(() => {
+    if (!showCategoryDropdown) return;
+    const handleClickOutside = (event) => {
+      if (categoryDropdownRef.current && !categoryDropdownRef.current.contains(event.target)) {
+        setShowCategoryDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showCategoryDropdown]);
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -229,18 +243,41 @@ const Menu = () => {
       <section className="section menu-section" ref={menuSectionRef}>
         <div className="container">
           {/* Category Filters */}
-          <div className="category-filters" ref={categoryFiltersRef}>
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                className={`category-btn ${activeCategory === category.id ? 'active' : ''}`}
-                onClick={() => handleCategoryChange(category.id)}
-              >
-                {category.icon && <span className="category-icon">{renderCategoryIcon(category.icon)}</span>}
-                {category.name}
-              </button>
-            ))}
-          </div>
+          <div className="category-dropdown-wrapper" ref={categoryDropdownRef}>
+  <button
+    className="category-dropdown-btn"
+    onClick={() => setShowCategoryDropdown((open) => !open)}
+    aria-haspopup="listbox"
+    aria-expanded={showCategoryDropdown}
+  >
+    {renderCategoryIcon(categories.find(cat => cat.id === activeCategory)?.icon)}
+    {activeCategory === 'all' ? 'Todos (ver categorías)' : categories.find(cat => cat.id === activeCategory)?.name}
+    <span className="dropdown-arrow">▼</span>
+  </button>
+  {showCategoryDropdown && (
+    <ul className="category-dropdown-list" role="listbox">
+      <li>
+        <button
+          className={`category-dropdown-item${activeCategory === 'all' ? ' active' : ''}`}
+          onClick={() => { handleCategoryChange('all'); setShowCategoryDropdown(false); }}
+        >
+          Todos
+        </button>
+      </li>
+      {categories.filter(cat => cat.id !== 'all').map((category) => (
+        <li key={category.id}>
+          <button
+            className={`category-dropdown-item${activeCategory === category.id ? ' active' : ''}`}
+            onClick={() => { handleCategoryChange(category.id); setShowCategoryDropdown(false); }}
+          >
+            {category.icon && <span className="category-icon">{renderCategoryIcon(category.icon)}</span>}
+            {category.name}
+          </button>
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
           
           {/* Search Bar */}
           <div className="search-container">
